@@ -1,0 +1,45 @@
+def even_or_odd(number):
+    num = number % 2
+    if num == 1:
+        is_true = "Odd"
+    else:
+        is_true = "Even"
+    return is_true
+
+def even_or_odd(number):
+    return 'Odd' if number % 2 else 'Even'
+
+===========================
+
+def opposite(number):
+    return number * -1
+
+def opposite(number):
+    return -number
+
+===========================
+
+def positive_sum(arr):
+    sum = 0
+    for numbers in arr:
+        if numbers > 0:
+            sum += numbers
+    return sum
+
+def positive_sum(arr):
+    return sum(x for x in arr if x > 0)
+
+===========================
+
+def make_negative(number):
+    return (number * -1) if (number > 0) else number
+
+def make_negative( number ):
+    return -abs(number)
+
+===========================
+
+def repeat_str(repeat, string):
+    return repeat * string
+
+
