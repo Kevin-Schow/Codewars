@@ -1,3 +1,5 @@
+Create a function (or write a script in Shell) that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
 def even_or_odd(number):
     num = number % 2
     if num == 1:
@@ -10,6 +12,8 @@ def even_or_odd(number):
     return 'Odd' if number % 2 else 'Even'
 
 ===========================
+Very simple, given a number, find its opposite.
+
 
 def opposite(number):
     return number * -1
@@ -18,6 +22,8 @@ def opposite(number):
     return -number
 
 ===========================
+You get an array of numbers, return the sum of all of the positives ones.
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
 
 def positive_sum(arr):
     sum = 0
@@ -30,6 +36,7 @@ def positive_sum(arr):
     return sum(x for x in arr if x > 0)
 
 ===========================
+In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
 
 def make_negative(number):
     return (number * -1) if (number > 0) else number
@@ -38,8 +45,7 @@ def make_negative( number ):
     return -abs(number)
 
 ===========================
+Write a function called repeatString which repeats the given string src exactly count times.
 
 def repeat_str(repeat, string):
     return repeat * string
-
-
