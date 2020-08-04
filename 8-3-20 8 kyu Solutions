@@ -1,0 +1,44 @@
+def remove_char(s):
+    return s[1:len(s)-1]
+
+def remove_char(s):
+    return s[1: -1]
+
+==============================
+
+def find_smallest_int(arr):
+    smallest = arr[0]
+    for number in arr:
+        if (number < smallest):
+            smallest = number
+    return smallest
+
+def findSmallestInt(arr):
+    return min(arr)
+
+==============================
+
+def bool_to_word(boolean):
+    return 'Yes' if boolean else 'No'
+
+==============================
+
+def count_sheeps(sheep):
+    total = 0
+    for e in sheep:
+        if e:
+            total += 1
+    return total
+
+def count_sheeps(arrayOfSheeps):
+  return arrayOfSheeps.count(True)
+
+==============================
+
+def greet():
+    return "hello world!"
+
+==============================
+
+def string_to_number(s):
+    return int(s)
