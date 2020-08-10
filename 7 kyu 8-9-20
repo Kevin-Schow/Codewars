@@ -1,0 +1,47 @@
+Return the number (count) of vowels in the given string.
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+The input string will only consist of lower case letters and/or spaces.
+
+def get_count(input_str):
+    num_vowels = 0
+    for letter in input_str:
+        if letter in ('a', 'e', 'i', 'o', 'u'):
+            num_vowels += 1
+    return num_vowels
+
+def getCount(inputStr):
+    return sum(1 for let in inputStr if let in "aeiouAEIOU")
+
+=====================================
+You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+#Examples:
+Kata.getMiddle("test") should return "es"
+Kata.getMiddle("testing") should return "t"
+Kata.getMiddle("middle") should return "dd"
+Kata.getMiddle("A") should return "A"
+#Input
+A word (string) of length 0 < str < 1000 (In javascript you may get slightly more than 1000 in some test cases due to an error in the test cases). You do not need to test for this. This is only here to tell you that you do not need to worry about your solution timing out.
+#Output
+The middle character(s) of the word represented as a string.
+
+def get_middle(s):
+    return(s[int((len(s)/2))]) if (len(s)%2) == 1 else (str(s[int((len(s)/2)-0.5)]) + str(s[int((len(s)/2)+0.5)]))
+
+def get_middle(s):
+   return s[(len(s)-1)/2:len(s)/2+1]
+
+=====================================
+
+Trolls are attacking your comment section!
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+def disemvowel(string):
+    for letter in string:
+        if letter in 'aeiouAEIOU':
+            string = string.replace(letter, '')
+    return string
+
+def disemvowel(s):
+    return s.translate(None, "aeiouAEIOU")
