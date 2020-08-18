@@ -1,0 +1,83 @@
+
+Description:
+In this little assignment you are given a string of space
+separated numbers, and have to return the highest and lowest number.
+
+import re
+
+def high_and_low(numbers):
+    largest = -9999
+    smallest = 9999
+    num = [i for i in re.split("[^-0-9]", numbers) if i != '']
+    for i in num:
+        if int(i) > int(largest):
+            largest = i
+        if int(i) < int(smallest):
+            smallest = i
+    return str(largest) + ' ' + str(smallest)
+
+
+def high_and_low(numbers): #z.
+    nn = [int(s) for s in numbers.split(" ")]
+    return "%i %i" % (max(nn),min(nn))
+
+============================================
+
+This time no story, no theory. The examples below
+show you how to write function accum:
+Examples:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+The parameter of accum is a string which includes
+only letters from a..z and A..Z.
+
+def accum(s):
+    count = 0
+    result = ''
+    for i in s:
+        result += i.upper()
+        counts = count
+        while counts:
+            result += i.lower()
+            counts -= 1
+        count += 1
+        result += '-'
+    return result[:-1]
+
+def accum(s):
+    return '-'.join(c.upper() + c.lower() * i for i, c in enumerate(s))
+
+============================================
+
+Simple, given a string of words, return the length
+of the shortest word(s).
+String will never be empty and you do not need to
+account for different data types.
+
+def find_short(s):
+    l = s.split()
+    return len(min(l, key=len))
+
+def find_short(s):
+    return min(len(x) for x in s.split())
+
+============================================
+Check to see if a string has the same amount of 
+'x's and 'o's. The method must return a boolean 
+and be case insensitive. The string can contain any char.
+
+Examples input/output:
+def xo(s):
+    x = 0
+    o = 0
+    for i in s:
+        if i.upper() == 'X':
+            x += 1
+        if i.upper() == 'O':
+            o += 1
+    return(x == o)
+
+def xo(s):
+    s = s.lower()
+    return s.count('x') == s.count('o')
