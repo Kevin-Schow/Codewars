@@ -1,0 +1,13 @@
+https://www.codewars.com/kata/54edbc7200b811e956000556
+
+Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+def count_sheeps(sheep):
+    total = 0
+    for e in sheep:
+        if e:
+            total += 1
+    return total
+
+def count_sheeps(arrayOfSheeps):
+  return arrayOfSheeps.count(True)
