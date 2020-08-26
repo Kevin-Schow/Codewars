@@ -1,0 +1,24 @@
+https://www.codewars.com/kata/554b4ac871d6813a03000035
+
+
+Description:
+In this little assignment you are given a string of space
+separated numbers, and have to return the highest and lowest number.
+
+import re
+
+def high_and_low(numbers):
+    largest = -9999
+    smallest = 9999
+    num = [i for i in re.split("[^-0-9]", numbers) if i != '']
+    for i in num:
+        if int(i) > int(largest):
+            largest = i
+        if int(i) < int(smallest):
+            smallest = i
+    return str(largest) + ' ' + str(smallest)
+
+
+def high_and_low(numbers): #z.
+    nn = [int(s) for s in numbers.split(" ")]
+    return "%i %i" % (max(nn),min(nn))
